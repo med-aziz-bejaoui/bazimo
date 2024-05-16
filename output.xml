@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.9.1 on win32)" generated="2024-05-16T13:15:29.620533" rpa="false" schemaversion="5">
+<suite id="s1" name="Test 1" source="D:\projet bazimo\test_automatisé\Test\Test_1.robot">
+<test id="s1-t1" name="login test" line="6">
+<kw name="Login" owner="Keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-16T13:15:29.856761" level="INFO">Opening browser 'chrome' to base url 'https://test-demonext.bazimo.fr/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-16T13:15:29.856761" elapsed="3.335122"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-16T13:15:33.192882" elapsed="0.647002"/>
+</kw>
+<kw name="on check element visibility" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${location}</arg>
+<arg>1200</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T13:15:33.840885" elapsed="0.348089"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-05-16T13:15:34.255398" level="INFO">Element '//input[@placeholder="Email"]' is displayed.</msg>
+<arg>${location}</arg>
+<arg>1200</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T13:15:34.188974" elapsed="0.067427"/>
+</kw>
+<arg>${INPUT_MAIL}</arg>
+<status status="PASS" start="2024-05-16T13:15:33.839884" elapsed="0.416517"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-16T13:15:34.257402" level="INFO">Typing text 'admin@bazimo.fr' into text field '//input[@placeholder="Email"]'.</msg>
+<arg>${INPUT_MAIL}</arg>
+<arg>${MAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T13:15:34.256401" elapsed="0.137304"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-16T13:15:34.393705" level="INFO">Typing text 'admin@bazimo.fr' into text field '//input[@placeholder="Mot de passe"]'.</msg>
+<arg>${INPUT_MOT_DE_PASSE}</arg>
+<arg>${MOT_DE_PASSE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T13:15:34.393705" elapsed="0.129113"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-16T13:15:34.523820" level="INFO">Clicking button '//button[@class="h-full w-full flex items-center justify-center disabled:bg-neutral-45 disabled:cursor-not-allowed disabled:text-neutral-50 rounded-full px-[16px] bg-primary-100 text-neutral-0 hover:bg-primary-90 hover:shadow-none active:bg-primary-100 active:shadow-lg"]'.</msg>
+<arg>${BOUTON_CONNEXION}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T13:15:34.522818" elapsed="0.132905"/>
+</kw>
+<status status="PASS" start="2024-05-16T13:15:29.855761" elapsed="4.799962"/>
+</kw>
+<status status="PASS" start="2024-05-16T13:15:29.854754" elapsed="4.810979"/>
+</test>
+<test id="s1-t2" name="Test Gestion" line="9">
+<kw name="Login" owner="Keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-16T13:15:34.672187" level="INFO">Opening browser 'chrome' to base url 'https://test-demonext.bazimo.fr/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-16T13:15:34.672187" elapsed="4.109121"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<msg time="2024-05-16T13:15:43.454377" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A8156DC6A0&gt;: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/87015a311db6bbd2e97e1d351682710d/screenshot</msg>
+<msg time="2024-05-16T13:15:47.487544" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A8156DC7F0&gt;: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/87015a311db6bbd2e97e1d351682710d/screenshot</msg>
+<msg time="2024-05-16T13:15:51.582699" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A8156DC9A0&gt;: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/87015a311db6bbd2e97e1d351682710d/screenshot</msg>
+<msg time="2024-05-16T13:15:56.363416" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: HTTPConnectionPool(host='localhost', port=16925): Max retries exceeded with url: /session/87015a311db6bbd2e97e1d351682710d/screenshot (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A8156DCB50&gt;: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée'))</msg>
+<doc>Maximizes current browser window.</doc>
+<status status="FAIL" start="2024-05-16T13:15:38.782309" elapsed="17.581107">Execution terminated by signal</status>
+</kw>
+<kw name="on check element visibility" owner="Keywords">
+<arg>${INPUT_MAIL}</arg>
+<status status="NOT RUN" start="2024-05-16T13:15:56.363416" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${INPUT_MAIL}</arg>
+<arg>${MAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-05-16T13:15:56.363416" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${INPUT_MOT_DE_PASSE}</arg>
+<arg>${MOT_DE_PASSE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-05-16T13:15:56.363416" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>${BOUTON_CONNEXION}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-05-16T13:15:56.363416" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-05-16T13:15:34.672187" elapsed="21.691229">Execution terminated by signal</status>
+</kw>
+<kw name="Gestion" owner="Keywords">
+<status status="NOT RUN" start="2024-05-16T13:15:56.363416" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-05-16T13:15:34.672187" elapsed="21.691229">Execution terminated by signal</status>
+</test>
+<test id="s1-t3" name="Lots page" line="13">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2024-05-16T13:15:56.363416" elapsed="0.000000">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t4" name="Baux page" line="21">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2024-05-16T13:15:56.363416" elapsed="0.000000">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t5" name="session de quittancement page" line="25">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2024-05-16T13:15:56.363416" elapsed="0.000000">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t6" name="tester le nombre de Lots" line="33">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2024-05-16T13:15:56.370819" elapsed="0.001010">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t7" name="tester la fonctionalité des filtre rapide du page baux" line="41">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2024-05-16T13:15:56.372394" elapsed="0.001052">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t8" name="tester recherche page Baux par actif" line="55">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2024-05-16T13:15:56.374446" elapsed="0.000000">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t9" name="tester recherche page Baux par N°bail" line="84">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2024-05-16T13:15:56.375775" elapsed="0.000000">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t10" name="tester recherche page Baux par Locataire" line="116">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2024-05-16T13:15:56.377083" elapsed="0.000000">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t11" name="tester filtre expiration page Baux" line="146">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2024-05-16T13:15:56.377852" elapsed="0.001044">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t12" name="tester filtre état page Baux" line="223">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2024-05-16T13:15:56.379893" elapsed="0.000462">Test execution stopped due to a fatal error.</status>
+</test>
+<status status="FAIL" start="2024-05-16T13:15:29.629697" elapsed="26.751946"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="11" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="1" skip="0" info="combined" combined="NOT robot:exit">NOT robot:exit</stat>
+</tag>
+<suite>
+<stat pass="1" fail="11" skip="0" id="s1" name="Test 1">Test 1</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-05-16T13:15:29.828350" level="WARN">Error in file 'D:\projet bazimo\test_automatisé\Keywords\Keywords.robot' on line 69: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-05-16T13:15:29.828350" level="WARN">Error in file 'D:\projet bazimo\test_automatisé\Keywords\Keywords.robot' on line 88: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-05-16T13:15:29.828350" level="WARN">Error in file 'D:\projet bazimo\test_automatisé\Keywords\Keywords.robot' on line 95: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-05-16T13:15:43.454377" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A8156DC6A0&gt;: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/87015a311db6bbd2e97e1d351682710d/screenshot</msg>
+<msg time="2024-05-16T13:15:47.487544" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A8156DC7F0&gt;: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/87015a311db6bbd2e97e1d351682710d/screenshot</msg>
+<msg time="2024-05-16T13:15:51.582699" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A8156DC9A0&gt;: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/87015a311db6bbd2e97e1d351682710d/screenshot</msg>
+<msg time="2024-05-16T13:15:56.363416" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: HTTPConnectionPool(host='localhost', port=16925): Max retries exceeded with url: /session/87015a311db6bbd2e97e1d351682710d/screenshot (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A8156DCB50&gt;: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée'))</msg>
+</errors>
+</robot>
